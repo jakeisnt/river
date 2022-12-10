@@ -20,7 +20,7 @@
       ...
   } @ inputs: let
 
-    zigVersion = "0.9.0";
+    zigVersion = "0.9.1";
     overlays = [
       # Other overlays
       (final: prev: {

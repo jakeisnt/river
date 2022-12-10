@@ -19,6 +19,8 @@
       flake-utils,
       ...
   } @ inputs: let
+
+    zigVersion = "0.9.0";
     overlays = [
       # Other overlays
       (final: prev: {
@@ -37,7 +39,7 @@
         defaultPackage = pkgs.zigpkgs.master;
         devShells.default = pkgs.mkShell {
           nativeBuildInputs = with pkgs; [
-            zigpkgs.master
+            zigpkgs.${zigVersion}
           ];
 
           buildInputs = with pkgs; [
